@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+@media screen and (max-width: 768px) {
+  #menu-toggle:checked + .nav-menu {
+    display: block;
+  }
+}
+nav.nav {
+  font-family: "Montserrat", serif;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.23);
+  .nav-item {
+    &:hover {
+      border-bottom: 2px solid #030;
+    }
+  }
+}
+.container.media-container {
+  font-family: "Montserrat", serif;
+  padding-top: 60px;
+  .filter-sort {
+    .field {
+      margin-right: 5px;
+      .field-label {
+        white-space: nowrap;
+        margin-right: 1rem;
+      }
+    }
+  }
+  .media-card-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    .media-card {
+      flex-grow: 1 auto;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 30px;
+      border-radius: 5px;
+      box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.23);
+      max-width: 300px;
+      .media-desc {
+        width: 100%;
+        height: 105px;
+        color: #c6c6c6;
+        .desc {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          .author {
+            display: flex;
+            align-items: center;
+            padding: 10px 5px 0px 5px;
+            .author-avatar {
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              overflow: hidden;
+              border: 1px solid white;
+            }
+            span {
+              font-size: 14px;
+              margin-left: 5px;
+              a {
+                color: #c6c6c6 !important;
+                // text-decoration: underline;
+              }
+            }
+          }
+          .caption {
+            padding: 5px;
+            font-size: 14px;
+            max-height: 50px;
+            overflow: hidden;
+            p:first-letter {
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+      .thumb {
+        img {
+          margin: 0 auto;
+          display: block;
+        }
+      }
+      .metadata{
+        padding: 0 10px;
+        font-size:0.7em;
+        margin-top: 5px;
+      }
+      &:last-child {
+        flex-grow: 10;
+        box-shadow: none;
+      }
+    }
+  }
+  .loading {
+    height: 120px;
+    display: block;
+    img {
+      height: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
